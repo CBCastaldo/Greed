@@ -19,10 +19,16 @@ class Actor:
     def __init__(self):
         """Constructs a new Actor."""
         self._text = ""
-        self._font_size = 15
+        self._points = 0
         self._color = Color(255, 255, 255)
         self._position = Point(0, 0)
         self._velocity = Point(0, 0)
+
+    def get_points(self):
+        return self._points
+
+    def set_points(self, points):
+        self._points = points
 
     def get_color(self):
         """Gets the actor's color as a tuple of three ints (r, g, b).
@@ -47,6 +53,11 @@ class Actor:
             Point: The actor's position in 2d space.
         """
         return self._position
+    
+    def get_position_bottom(self):
+        x = self._position._x
+        y = self._position._y + self._font_size
+        return Point(x, y)
     
     def get_text(self):
         """Gets the actor's textual representation.

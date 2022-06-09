@@ -1,5 +1,3 @@
-from actor import Actor
-
 class Cast:
     """A collection of actors.
 
@@ -76,7 +74,5 @@ class Cast:
         if group in self._actors:
             self._actors[group].remove(actor)
     
-    def move_actor(self):
-        self.y += 1
 
     
